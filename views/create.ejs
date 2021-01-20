@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- navbar with ejs include synthax -->
+ <%- include('./partials/head.ejs') %>
+<body>
+     <!-- navbar with ejs include synthax -->
+     <%- include('./partials/nav.ejs') %>
+    <div class="text-center">
+        <div class="container">
+          <div class="row">
+            <h2>Create Blog</h2>
+            <div class="mb-3">
+              <form action="/blog" method="POST">
+                  <label for="exampleFormControlInput1" class="form-label">Blog Title</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Blog Title" name="title">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Blog Snippet</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Blog Snippet" name="snippet">
+                </div>
+                <div class="mb-3">
+                  <label style="resize: none;" for="exampleFormControlTextarea1" class="form-label">Blog details</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="body"></textarea>
+                </div>
+                <div>
+                  <button class="btn-primary px-5 rounded">Post</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!-- navbar with ejs include synthax -->
+<%- include('./partials/footer.ejs') %>
